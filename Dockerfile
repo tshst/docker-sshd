@@ -14,6 +14,7 @@ RUN mkdir           /home/dep/.ssh; chown dep: /home/dep/.ssh; chmod 700 /home/d
 ADD authorized_keys /home/dep/.ssh/authorized_keys
 RUN chown dep:      /home/dep/.ssh/authorized_keys
 RUN chmod 600       /home/dep/.ssh/authorized_keys
+RUN chown dep:      /home/dep
 
 # Set up sudoers
 RUN echo "dep    ALL=(ALL)       ALL" >> /etc/sudoers.d/dep
